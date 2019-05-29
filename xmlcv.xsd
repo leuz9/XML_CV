@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+
+<xsd:schema	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+ 	<xsd:annotation>
+  		<xsd:documentation xml:lang="fr">
+  			XMLCV Version 1.0
+  			Copywrite Arnaud Fontenoy 2005
+  		</xsd:documentation>
+ 	</xsd:annotation>
+
+	<!--
+		Display
+	-->
+	<xsd:simpleType name="type-affichage">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="expanded"/>
+			<xsd:enumeration value="minimized"/>
+			<xsd:enumeration value="normal"/>
+			<xsd:enumeration value="none"/>
+		</xsd:restriction>
+	</xsd:simpleType>		
+
+
+	<!--
+		Affichage
+	-->
+	<xsd:complexType	name="affichage">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute	name="mode"
+								form="qualified"
+								type="xsd:string"/>
+				<xsd:attribute	name="display"
+								form="qualified"
+								type="type-affichage"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<!--
+		Mode
+	-->
+	<xsd:complexType name="mode">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute	name="nom"
+								form="qualified"
+								type="xsd:string"/>
+				<xsd:attribute	name="lien-cv-complet"
+								form="unqualified"
+								type="xsd:anyURI"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>		
+
+	<!--
+		Modes
+	-->
+	<xsd:complexType name="modes">
+		<xsd:sequence>
+			<xsd:choice	minOccurs="0"
+						maxOccurs="unbounded"
+						>
+				<xsd:element	name="mode"
+								type="mode" />
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>		
+
+	<!--
+		Type
+	-->
+	<xsd:complexType	name="type"
+						mixed="true">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="text"
+							type="xsd:string" />
+		</xsd:choice>
+		<xsd:attribute name="nom" type="xsd:string"/>
+	</xsd:complexType>		
+
+	<!--
+		Types technologiques
+	-->
+	<xsd:complexType name="types-technologies">
+		<xsd:choice minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="type"
+							type="type" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<!--
+		Type de telephone
+	-->
+	<xsd:simpleType name="type-telephone">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="mobile"/>
+			<xsd:enumeration value="fixe"/>
+		</xsd:restriction>
+	</xsd:simpleType>		
+
+	<!--
+		Telephone
+	-->
+	<xsd:complexType name="telephone">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute	name="type"
+								form="qualified"
+								type="type-telephone"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>		
+	
+	<!--
+		Photo
+	-->
+	<xsd:complexType name="photo">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute	name="path"
+								form="qualified"
+								type="xsd:anyURI"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>		
+
+	<!--
+		Etat civil
+	-->
+	<xsd:simpleType name="etat-civil">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="célibataire"/>
+			<xsd:enumeration value="marié"/>
+			<xsd:enumeration value="mariée"/>
+			<xsd:enumeration value="veuf"/>
+			<xsd:enumeration value="veuve"/>
+		</xsd:restriction>
+	</xsd:simpleType>		
+
+	<!--
+		Donnees personnelles
+	-->
+	<xsd:complexType name="donnees-personnelles">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="nom"
+							type="xsd:string" />
+			<xsd:element	name="prenom"
+							type="xsd:string" />
+			<xsd:element	name="etat-civil"
+							type="etat-civil" />
+			<xsd:element	name="date-de-naissance"
+							type="xsd:date" />
+			<xsd:element	name="age"
+							type="xsd:integer" />
+			<xsd:element	name="adresse"
+							type="xsd:string" />
+			<xsd:element	name="telephone"
+							type="telephone" />
+			<xsd:element	name="e-mail"
+							type="xsd:string" />
+			<xsd:element	name="photo"
+							type="photo" />
+		</xsd:choice>
+	</xsd:complexType>		
+
+	<!--
+		Centre d'intérêt
+	-->
+	<xsd:complexType name="centre-d-interet"
+					mixed="true">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="text"
+							type="xsd:string" />
+		</xsd:choice>
+		<xsd:attribute	name="nom"
+						form="qualified"
+						type="xsd:string"/>
+	</xsd:complexType>		
+
+	<!--
+		Centres d'intérêts
+	-->
+	<xsd:complexType name="donnees-centres-d-interet">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="centre-d-interet"
+							type="centre-d-interet" />
+		</xsd:choice>
+	</xsd:complexType>		
+
+	<!--
+		Formation
+	-->
+	<xsd:complexType name="formation">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="titre"
+							type="xsd:string" />
+			<xsd:element	name="description"
+							type="xsd:string" />
+			<xsd:element	name="lien-internet"
+							type="xsd:anyURI" />
+			<xsd:element	name="affichage"
+							type="affichage" />
+		</xsd:choice>
+
+		<xsd:attribute	name="date-debut"
+						form="unqualified"
+						type="xsd:string"/>
+		<xsd:attribute	name="date-fin"
+						form="unqualified"
+						type="xsd:string"/>
+	</xsd:complexType>		
+
+	<!--
+		Centres d'intérêts
+	-->
+	<xsd:complexType name="donnees-formation">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="formation"
+							type="formation" />
+		</xsd:choice>
+	</xsd:complexType>		
+
+	<!--
+		Technologie
+	-->
+	<xsd:complexType name="technologie">
+		<xsd:attribute	name="type"
+						form="qualified"
+						type="xsd:string"/>
+		<xsd:attribute	name="nom"
+						form="qualified"
+						type="xsd:string"/>
+	</xsd:complexType>		
+
+	<!--
+		Environnement technique
+	-->
+	<xsd:complexType name="environnement-technique">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="technologie"
+							type="technologie" />
+		</xsd:choice>
+	</xsd:complexType>		
+
+	<!--
+		Expérience
+	-->
+	<xsd:complexType name="experience">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="abstract"
+							type="xsd:string" />
+			<xsd:element	name="description"
+							type="xsd:string" />
+			<xsd:element	name="environnement-technique"
+							type="environnement-technique" />
+			<xsd:element	name="affichage"
+							type="affichage" />
+		</xsd:choice>
+
+		<xsd:attribute	name="nom"
+						form="qualified"
+						type="xsd:string"/>
+		<xsd:attribute	name="duree"
+						form="unqualified"
+						type="xsd:string"/>
+		<xsd:attribute	name="date-debut"
+						form="unqualified"
+						type="xsd:string"/>
+		<xsd:attribute	name="date-fin"
+						form="unqualified"
+						type="xsd:string"/>
+	</xsd:complexType>		
+
+	<!--
+		Données expérience	
+	-->
+	<xsd:complexType name="donnees-experience">
+		<xsd:choice	minOccurs="0"
+					maxOccurs="unbounded">
+			<xsd:element	name="experience"
+							type="experience" />
+		</xsd:choice>
+	</xsd:complexType>		
+
+	<!--
+		CV
+	-->
+	<xsd:element name="cv">
+		<xsd:complexType>
+			<xsd:choice	minOccurs="0"
+						maxOccurs="unbounded">
+				<xsd:element	name="modes"
+								type="modes" />
+				<xsd:element	name="types-technologies"
+								type="types-technologies" />
+				<xsd:element	name="donnees-personnelles"
+								type="donnees-personnelles" />
+				<xsd:element	name="donnees-centres-d-interet"
+								type="donnees-centres-d-interet" />
+				<xsd:element	name="donnees-formation"
+								type="donnees-formation" />
+				<xsd:element	name="donnees-experience"
+								type="donnees-experience" />
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element> 
+</xsd:schema>

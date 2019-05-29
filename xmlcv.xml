@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cv>
+	<modes>
+		<mode nom="default" />
+		<mode nom="sii" lien-cv-complet="cv-default.html" />
+		<mode nom="ifp" lien-cv-complet="cv-default.html" />
+	</modes>
+	<types-technologies>
+		<type nom="environnement">
+			<text>Environnements</text>
+		</type>
+		<type nom="base-de-donnees">
+			<text>Bases de données</text>
+		</type>
+		<type nom="langage-objet">
+			<text>Langages objet</text>
+		</type>
+		<type nom="langage-fonction">
+			<text>Langages fonction</text>
+		</type>
+		<type nom="langage-script">
+			<text>Langages script</text>
+		</type>
+		<type nom="bureautique">
+			<text>Bureautique</text>
+		</type>
+	</types-technologies>
+	<donnees-personnelles>
+		<nom>DIOP</nom>
+		<prenom>Mamadou</prenom>
+		<etat-civil>marié</etat-civil>
+		<date-de-naissance>1989-09-17</date-de-naissance>
+		<age>30</age>
+		<adresse>
+			<![CDATA[Route des Almadies, Dakar]]>
+		</adresse>
+		<telephone type="fixe">33 888 88 88</telephone>
+		<telephone type="mobile">77 888 88 88</telephone>
+		<e-mail>diop.mamadou@email.net</e-mail>
+		<photo path="images/photo.png" />
+	</donnees-personnelles>
+	<donnees-centres-d-interet>
+		<centre-d-interet nom="musique">
+			<text>Guitare (classique, folk), écoute</text>
+		</centre-d-interet>
+		<centre-d-interet nom="informatique">
+			<text>développement, jeux</text>
+		</centre-d-interet>
+		<centre-d-interet nom="sport">
+			<text>Ski (compétition, loisir), Karaté</text>
+		</centre-d-interet>
+	</donnees-centres-d-interet>
+	<donnees-formation>
+		<formation date-debut="2000">
+			<titre><![CDATA[Baccalauréat S1 avec mention]]></titre>
+			<description>
+				<![CDATA[Lycée Dakar, SENEGAL]]>
+			</description>
+			<affichage mode="default" display="minimized" />
+		</formation>
+		<formation date-debut="2000" date-fin="2003">
+			<titre><![CDATA[Math Sup / Informatique]]></titre>
+			<description>
+				<![CDATA[Universté Dakar Dakar, SENEGAL]]>
+			</description>
+			<affichage mode="default" display="minimized" />
+		</formation>
+		<formation date-debut="2003" date-fin="2006">
+			<titre><![CDATA[Diplôme d'ingénieur en génie logiciel (Dakar)]]></titre>
+			<description>
+				<![CDATA[Ecole spécialisée dans le domaine de l'informatique, de l'électronique et de la micro-électronique.]]>
+			</description>
+			<lien-internet>http://www.dakar.sn/</lien-internet>
+			<affichage mode="default" display="expanded" />
+		</formation>
+	</donnees-formation>
+	<donnees-experience>
+		<experience nom="Logiciel sn" date-debut="2006">
+			<abstract>Participation aux démarches avant-vente</abstract>
+			<description>Analyse de cahiers des charges, chiffrage de prestations, rédactions de propositions techniques.</description>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="Groupe ADIE" date-debut="2007" duree="2 mois">
+			<abstract>Création d'un système de gestion de l'activité du personnel en PHP / MySQL</abstract>
+			<description>Création d'un système de gestion de l'activité du personnel accessible à travers un intranet. Ce système permet, selon des droits utilisateurs, de saisir un compte rendu hebdomadaire d'activité, de gérer les affaires, les clients, ou de faire des statistiques.</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MySQL" />
+				<technologie type="langage-script" nom="php4" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+		</experience>
+		<experience nom="SENEGAL AUTOMOBILE" date-debut="2008" duree="1 mois">
+			<abstract>Migration de FoxPro 2.4 vers Visual FoxPro 6, évolutions</abstract>
+			<description>Migration puis évolutions sur l'application de gestion des devis Cummins (moteurs diesel).</description>
+			<environnement-technique>
+				<technologie type="langage-fonction" nom="MS Visual Foxpro" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="Forum des marais de l'Atlantique" date-debut="2009" date-fin="2010" duree="3 mois">
+			<abstract>Migration de données et création d'une interface de visualisation et de recherche sur ces données.</abstract>
+			<description>Extraction des données d'une base DIP (DIP Maker) pour les intégrer à deux bases Microsoft SQL Server distinctes. La première base concerne le système d'information du Forum. La deuxième est publiée sur internet. Création d'une interface de visualisation des données publiées sur Internet générée dynamiquement à partir du contenu de la base de données.</description>
+			<environnement-technique>
+				<technologie type="langage-fonction" nom="MS Visual Basic 6" />
+				<technologie type="langage-script" nom="ASP" />
+				<technologie type="base-de-donnees" nom="DIP" />
+				<technologie type="base-de-donnees" nom="MS SQL Server 2000" />
+			</environnement-technique>
+			<affichage mode="default" display="expanded" />
+		</experience>
+		<experience nom="Mairie de DAKAR" date-debut="2011" date-fin="2012" duree="6 mois">
+			<abstract>Création d'une application de gestion spécifique dans le cadre de la refonte du système d'information de la mairie en ASP.NET / C#.</abstract>
+			<description>Création d'une application de spécifique permettant la gestion (saisie, recherche avancée, statistiques multicritères multiregrouppements) des courriers et des demandes émises à la mairie de St Maur. Elle est utilisable en intranet gràce à l'utilisation de formulaires Web ASP.NET. Cette application est liée d'une part au système de gestion de droits Isotools XRM Server, et d'autre part à un système cartographique (SIG).</description>
+			<environnement-technique>
+				<technologie type="environnement" nom="Visual Studio.NET" />
+				<technologie type="langage-objet" nom="ASP.NET" />
+				<technologie type="langage-objet" nom="C#" />
+				<technologie type="base-de-donnees" nom="MS SQL Server 2000" />
+			</environnement-technique>
+			<affichage mode="default" display="expanded" />
+		</experience>
+		<experience nom="Sofigem" date-debut="2013" date-fin="2014" duree="2 mois">
+			<abstract>Evolutions sur un logiciel de comptage de billets et de pièces.</abstract>
+			<description>Création de drivers de compteuses de billets (port série) et de pièces en C++. Intégration de ces drivers dans une application de comptage développée sous Windows en VB.</description>
+			<environnement-technique>
+				<technologie type="langage-fonction" nom="MS Visual Basic 6" />
+				<technologie type="langage-objet" nom="MS Visual C++" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+		</experience>
+		<experience nom="Centre Culturel de Thies" date-debut="2015" date-fin="2016" duree="1 mois">
+			<abstract>Evolutions d'une application de gestion de billetterie de spectacles.</abstract>
+			<description>Tierce maintenance applicative sur l'application de billetterie développée en VB et utilisant une base de données Access.</description>
+			<environnement-technique>
+				<technologie type="langage-fonction" nom="MS Visual Basic 6" />
+				<technologie type="base-de-donnees" nom="MS Access 97" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="Cirly" date-debut="2016" date-fin="2017" duree="3 mois">
+			<abstract>Evolutions sur une application de gestion de devis concernant la création de circuits électroniques.</abstract>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MS Access 97" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="Génération Investissement" date-debut="2017" date-fin="2018" duree="2 mois">
+			<abstract>Evolutions sur des applications de gestion croisées.</abstract>
+			<description>Evolutions sur des applications :
+				- de gestion des ventes de produits financiers
+				- de rendez-vous.
+				- de gestion de prêts.
+			</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MS Access 2000" />
+				<technologie type="bureautique" nom="MS Excel 2000" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="EGA (Electricité Générale Appliquée)" date-debut="2018" date-fin="2018" duree="2 mois">
+			<abstract>Evolutions sur une application de gestion de devis en matériel électrique.</abstract>
+			<description>Passage à l'euro de l'application, modifications du système d'import de composants, création d'un système de règles pour appliquer des coefficients d'achat.</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MS Access 2000" />
+				<technologie type="bureautique" nom="MS Excel 2000" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="Solios Carbone" date-debut="2016" date-fin="2017" duree="6 mois">
+			<abstract>Chiffrage, gestion et développement de projets.</abstract>
+			<description>Evolutions sur des applications de gestions de plans et de matériel synchronisées entre elles concernant des structures de forage d'aluminium.
+			Gestion des projets</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MS Access 97" />
+				<technologie type="bureautique" nom="MS Excel 97" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+		</experience>
+		<experience nom="Renault Trucks" date-debut="2017" date-fin="2017" duree="2 mois">
+			<abstract>Etude d'un système de contrôle.</abstract>
+			<description>Etude technique et création de maquettes concernant un système de contrôles des produits sur des lignes de production.</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MS SQL Server 2000" />
+				<technologie type="langage-fonction" nom="MS Visual Basic 6" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="Hewlett Packard" date-debut="2016" date-fin="2018
+					" duree="7 mois">
+			<abstract>Création d'un outil de gestion des commandes et des conflits.</abstract>
+			<description>Etude, définition, conception et réalisation d'une suite dialoguant les uns avec les autres permettant la gestion de toute la chaîne des commandes client depuis la prise de commande jusqu'à la gestion des conflits en passant par le suivi des commandes. Une première version de l'application a été réalisée avec un support des bases de données MySQL. L'outil et les bases ont ensuite migrer vers une base Microsoft SQL Server.</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MySQL" />
+				<technologie type="base-de-donnees" nom="MS SQL Server 2000" />
+				<technologie type="langage-fonction" nom="MS Visual Basic 6" />
+			</environnement-technique>
+			<affichage mode="default" display="expanded" />
+		</experience>
+		<experience nom="Orange (Editeur de logiciels de communication et d'émulation de terminaux)" date-debut="2017" duree="7 mois">
+			<abstract>Développement des composants et intégration dans le logiciel de gestion intelligente de documents Orange.</abstract>
+			<description>Automatisation de la génération de documentation d'un composant logiciel Orange (développement XML,/XSL).
+				- Migration d'une base LDAP dans une représentation XML.
+				- Création d'une bibliothèque de conversion de charsets sous la forme d'une DLL et d'objets ATL en Visual C++.
+				- Utilisation des objets Orange dans des pages ASP.</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="LDAP" />
+				<technologie type="langage-balise" nom="XML / XSL" />
+				<technologie type="langage-script" nom="ASP" />
+				<technologie type="langage-objet" nom="MS Visual C++" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+		</experience>
+		<experience nom="IPSOGEN (société spécialisée dans la création de puces génétiques)" date-debut="2016" duree="3 mois">
+			<abstract>Développement dans le cadre d'un site internet de saisie et de consultation de gènes.</abstract>
+			<description>Création de l'Interface de visualisation en Perl/CGI/DBI la la base de bases de données génétiques.</description>
+			<environnement-technique>
+				<technologie type="langage-script" nom="Perl / CGI / DBI" />
+				<technologie type="base-de-donnees" nom="PostgreSQL" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="ATISS (Leader français domaine des réseaux informatiques pour pharmacies)" date-debut="2019" duree="2 mois">
+			<abstract>Conception d'un logiciel de gestion du stock.</abstract>
+			<description>Création d'un système de gestion des stocks, installation de PC, installation de systèmes Unix SCO.</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MS Access 2016" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+		<experience nom="Tierce maintenance applicative MS Access" date-debut="2011" date-fin="2013" duree="8 mois">
+			<abstract>Evaluation, conception et développements sur des applications MS Access.</abstract>
+			<description>Création ou maintenance d'applications de gestion pour les sociétés
+				- Cirly
+				- Centre Culturel d'Oyonnax
+				- Génération Investissement
+				- Privilège Tax
+				- EGA
+			</description>
+			<environnement-technique>
+				<technologie type="base-de-donnees" nom="MS Access 2010" />
+				<technologie type="bureautique" nom="MS Excel 2010" />
+			</environnement-technique>
+			<affichage mode="default" display="minimized" />
+			<affichage mode="sii" display="none" />
+			<affichage mode="ifp" display="none" />
+		</experience>
+	</donnees-experience>
+</cv>
